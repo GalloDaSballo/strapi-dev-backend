@@ -21,7 +21,9 @@ module.exports = {
         entity.name = "Name"
         entity.location = "Location"
         entity.preferred_salary = "Salary"
-        entity.hasPaid = false
+        entity.hasPaid = false,
+        entity.github = "Github"
+        entity.linkedin = "Linkedin"
     })
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.profile }));

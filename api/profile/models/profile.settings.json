@@ -50,6 +50,12 @@
     },
     "title": {
       "type": "text"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
     }
   }
 }
