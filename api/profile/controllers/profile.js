@@ -8,7 +8,6 @@ module.exports = {
    */
 
   async find(ctx) {
-    console.log(ctx)
     let entities;
     if (ctx.query._q) {
       entities = await strapi.services.profile.search(ctx.query);
