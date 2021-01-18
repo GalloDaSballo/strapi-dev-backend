@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "tags",
   "info": {
-    "name": "tag"
+    "name": "tag",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -13,9 +14,10 @@
     "label": {
       "type": "string"
     },
-    "profile": {
+    "profiles": {
+      "collection": "profile",
       "via": "skills",
-      "model": "profile"
+      "dominant": true
     }
   }
 }

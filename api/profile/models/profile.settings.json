@@ -32,10 +32,6 @@
       "type": "uid",
       "targetField": "title"
     },
-    "skills": {
-      "collection": "tag",
-      "via": "profile"
-    },
     "bio": {
       "type": "richtext"
     },
@@ -56,6 +52,10 @@
     },
     "github": {
       "type": "string"
+    },
+    "skills": {
+      "via": "profiles",
+      "collection": "tag"
     }
   }
 }
