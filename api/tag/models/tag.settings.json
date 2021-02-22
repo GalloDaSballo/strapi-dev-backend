@@ -15,8 +15,8 @@
       "type": "string"
     },
     "profiles": {
-      "collection": "profile",
       "via": "skills",
+      "collection": "profile",
       "dominant": true
     }
   }

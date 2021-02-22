@@ -54,8 +54,13 @@
       "type": "string"
     },
     "skills": {
-      "via": "profiles",
-      "collection": "tag"
+      "collection": "tag",
+      "via": "profiles"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "profile"
     }
   }
 }
