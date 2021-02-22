@@ -55,6 +55,22 @@ module.exports = {
    * @return {Object}
    */
 
+  async findMine(ctx) {
+    const { user } = ctx.state
+    const entity = await strapi.services.profile.findOne({ id: user.profile.id });
+
+    // Sanitize just because
+    sanitize(entity)
+
+    return sanitizeEntity(entity, { model: strapi.models.profile });
+  },
+    /**
+   * Retrieve a record.
+   * Cleaned up for privacy + sales
+   *
+   * @return {Object}
+   */
+
   async findOne(ctx) {
     const { id } = ctx.params;
 

@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/profiles/:my",
+      "handler": "profile.findMine",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/profiles/:id",
       "handler": "profile.findOne",
       "config": {
@@ -35,6 +43,14 @@
     {
       "method": "PUT",
       "path": "/profiles/:id",
+      "handler": "profile.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/profiles/",
       "handler": "profile.update",
       "config": {
         "policies": []
