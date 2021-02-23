@@ -32,9 +32,9 @@ module.exports = {
   async find(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.services.profile.search(ctx.query, ["skills"]);
+      entities = await strapi.services.profile.search(ctx.query, ["skills", "image", "image.url"]);
     } else {
-      entities = await strapi.services.profile.find(ctx.query, ["skills"]);
+      entities = await strapi.services.profile.find(ctx.query, ["skills", "image", "image.url"]);
     }
 
     //Check if users has paid to see info about devs
@@ -74,7 +74,7 @@ module.exports = {
   async findOne(ctx) {
     const { id } = ctx.params;
 
-    const entity = await strapi.services.profile.findOne({ id }, ["skills"]);
+    const entity = await strapi.services.profile.findOne({ id }, ["skills", "image", "image.url"]);
 
     // Clean up
     hideFields(entity)
